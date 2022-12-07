@@ -91,7 +91,7 @@ const LegendDetailsItem = styled.div`
 
 const DescriptionSpan = styled.span`
   text-transform: ${(props) => (props.capitalize && "capitalize") || "inherit"};
-  font-size: 12px;
+  font-size: 15px;
   font-weight: lighter;
   width: 120px;
   color: #fff;
@@ -99,7 +99,7 @@ const DescriptionSpan = styled.span`
   text-overflow: ellipsis;
   white-space: nowrap;
   @media (max-width: 1440px) {
-    font-size: 11px;
+    font-size: 15px;
   }
 `;
 
@@ -180,7 +180,7 @@ const ThePieChart = ({ size, dataKey, NameKey, data }) => {
   ];
 
   const pieSize = (radius) => {
-    return radius * 5;
+    return radius * 4.5;
   };
 
   const onPieEnter = (__, index) => setPieIndex(index);

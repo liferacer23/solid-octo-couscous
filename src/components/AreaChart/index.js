@@ -26,7 +26,7 @@ const AreaChartComponent = ({
   stopColor2,
   strokeColor,
 }) => (
-  <ResponsiveContainer height={customHeight || 200}>
+  <ResponsiveContainer height={customHeight || 150}>
     <AreaChart data={data}>
       <defs>
         <linearGradient id={`${dataKey}`} x1="0" y1="0" x2="1" y2="1">
@@ -42,6 +42,12 @@ const AreaChartComponent = ({
           />
         </linearGradient>
       </defs>
+      <defs>
+        <linearGradient id={"strokeColor"} x1="100%" y1="10%" x2="50%" y2="50%">
+          <stop offset="50%" stop-color="#C2A6FF" />
+          <stop offset="100%" stop-color="#6AB4FF" />
+        </linearGradient>
+      </defs>
       <XAxis
         dataKey={NameKey}
         stroke="#888B9E"
@@ -51,20 +57,20 @@ const AreaChartComponent = ({
       />
       <YAxis stroke="transparent" axisLine={false} tickLine={false} />
       <CartesianGrid
-        strokeDasharray="3 1"
+        strokeDasharray="0.5 3"
         stroke="gray"
         horizontal={false}
-        stopOpacity={0.5}
+        stopOpacity={0.2}
       />
       <Tooltip />
       <Area
         type={"linear"}
         dataKey={dataKey}
-        stroke={strokeColor || "#77B3FF"}
-        strokeWidth={4}
+        stroke={`url(#strokeColor)`}
+        strokeWidth={1.8}
         fillOpacity={1}
         fill={`url(#${dataKey})`}
-        dot={<RechartsDot r={6} stroke="#77B3FF" fill="#fff" strokeWidth={3} />}
+        dot={<RechartsDot r={3} stroke="#77B3FF" fill="#fff" strokeWidth={1} />}
       />
     </AreaChart>
   </ResponsiveContainer>
@@ -72,10 +78,9 @@ const AreaChartComponent = ({
 
 export const AreaChart = styled(RechartsAreaChart)`
   //STYLE FOR THE DOT
-
   .recharts-active-dot .recharts-dot {
-    r: 10px !important;
-    stroke-width: 8px !important;
+    r: 5px !important;
+    stroke-width: 2px !important;
   }
 
   //STYLE FOR THE TOOLTIP CONTAINER
@@ -91,21 +96,9 @@ export const AreaChart = styled(RechartsAreaChart)`
     padding-bottom: 10px !important;
     background: #eaf4fc !important;
     outline: none !important;
-    min-width: 159px !important;
-    height: 68px !important;
     border: none !important;
   }
-  .recharts-default-tooltip :after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 94%;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 10px solid #eaf4fc;
-  }
+
 
   //STYLE FOR THE TOOLTIP
 
