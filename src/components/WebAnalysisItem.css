@@ -1,0 +1,109 @@
+.header {
+  padding: 10px;
+}
+.headerText {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.headerItem {
+  width: fit-content;
+  padding: 10px;
+  height: 45px;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 23px;
+}
+.selectText {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.selectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px;
+  margin: 10px;
+}
+.descriptionItem1 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  color: #75b3ff;
+  opacity: 0.7;
+  margin: 10px;
+}
+.descriptionItem2 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  margin: 10px;
+  /* identical to box height, or 71% */
+  opacity: 0.7;
+  color: #0fdf63;
+}
+.descriptionItem3 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 24px;
+  margin: 10px;
+  /* identical to box height, or 71% */
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.descriptionTitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.descriptionItem6,
+.descriptionItem4,
+.descriptionItem5 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.7;
+  margin: 10px;
+}
