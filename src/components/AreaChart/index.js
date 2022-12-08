@@ -26,6 +26,7 @@ const AreaChartComponent = ({
   stopColor2,
   strokeColor,
 }) => (
+  console.log(data),
   <ResponsiveContainer height={customHeight || 150}>
     <AreaChart data={data}>
       <defs>
@@ -50,7 +51,7 @@ const AreaChartComponent = ({
       </defs>
       <XAxis
         dataKey={NameKey}
-        stroke="#888B9E"
+        stroke={ "gray"}
         axisLine={false}
         tickLine={false}
         tickFormatter={renderDate && momentifyDate}

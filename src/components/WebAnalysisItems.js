@@ -7,11 +7,11 @@ import PieChart from "./Piechart";
 import AreaChart from "./AreaChart";
 
 const data = [
-  { name: "Group A", count: 86 },
-  { name: "Group B", count: 86 },
-  { name: "Group C", count: 86 },
-  { name: "Group D", count: 86 },
-  { name: "Group E", count: 86 }
+  { name: "Lorem Epsem", count: 86 },
+  { name: "Lorem Epsem", count: 86 },
+  { name: "Lorem Epsem", count: 86 },
+  { name: "Lorem Epsem", count: 86 },
+  { name: "Lorem Epsem", count: 86 }
 ];
 const data1 = [
   { name: "Mon", count: 30 },
@@ -113,11 +113,11 @@ function WebAnalysisItems() {
             <Col sm={6} style={{ display: "flex" }}>
               <Col sm={4}>
                 <div className="description">
-                  <span className="descriptionTitle">Total Items</span>
+                  <span className="descriptionTitle">Lorem Epsem</span>
                   <span className="descriptionItem4">53</span>
-                  <span className="descriptionTitle">Changes from Last Week</span>
+                  <span className="descriptionTitle">Lorem Epsem</span>
                   <span className="descriptionItem5">+2</span>
-                  <span className="descriptionTitle">Total Items in DB</span>
+                  <span className="descriptionTitle">Lorem Epsem</span>
                   <span className="descriptionItem6">Lorem Epsem</span>
                 </div>
               </Col>

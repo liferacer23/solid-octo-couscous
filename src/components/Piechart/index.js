@@ -91,15 +91,17 @@ const LegendDetailsItem = styled.div`
 
 const DescriptionSpan = styled.span`
   text-transform: ${(props) => (props.capitalize && "capitalize") || "inherit"};
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
   width: 120px;
   color: #fff;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 25px;
+  margin-bottom: 25px;
   @media (max-width: 1440px) {
-    font-size: 15px;
+    font-size: 20px;
   }
 `;
 
@@ -118,8 +120,8 @@ const ChartLegend = (props) => {
   justify-content: center;
   font-size: 13px;
   width: 100%;
-  height: 80%;
-  overflow: ${size === "medium" ? "scroll" : "hidden"};
+  height: 100%;
+  gap: 10px;
   &:overflow: scroll;
   &:--ms-overflow-style: none;
   &:scrollbar-width: none;
@@ -143,7 +145,7 @@ const ChartLegend = (props) => {
         (entry, Arraying) => (
           (color1 = COLORS[entry.color.slice(5, 6)]?.start),
           (color2 = COLORS[entry.color.slice(5, 6)]?.end),
-          console.log(color1, color2),
+
           (
             <LegendDetails key={`item-${Arraying}`} capitalize={capitalize}>
               <LegendDetailsItem color={color1}></LegendDetailsItem>
@@ -255,7 +257,7 @@ const ThePieChart = ({ size, dataKey, NameKey, data }) => {
         >
           {data &&
             data.map((__, index) => (
-              <Cell key={`cell-${index}`} fill={`url(#${index})`} />
+              <Cell key={`cell-${index}`} fill={`url(#${index})`} stroke="transparent" />
             ))}
         </Pie>
       </PieChart>
